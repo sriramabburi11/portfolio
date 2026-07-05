@@ -123,3 +123,4 @@ No other component needs to change either way.
   (Contact form, Navbar section highlighting).
 - Add an `og-image.png` in `public/` for richer social link previews.
 # portfolio
+# portfolio
