@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-900 font-body text-ink-100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink-50;
+  }
+
+  html.light h1,
+  html.light h2,
+  html.light h3,
+  html.light h4 {
+    @apply text-navy-900;
+  }
+
+  ::selection {
+    @apply bg-accent-500/30 text-ink-50;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.400');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-600 rounded-full;
+  }
+
+  html.light body {
+    @apply bg-ink-50 text-navy-800;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs tracking-widest uppercase text-accent-400;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .card-surface {
+    @apply rounded-xl border border-navy-600/60 bg-navy-800/80 shadow-card backdrop-blur-sm;
+  }
+
+  html.light .card-surface {
+    @apply border-ink-300/40 bg-white shadow-none;
+  }
+  .navbar-scrolled {
+  @apply border-b border-navy-700/70 bg-navy-900/85 backdrop-blur-md;
+  }
+
+  html.light .navbar-scrolled {
+    @apply border-b border-ink-300/50 bg-white/85;
+  }
+
+  .mobile-menu-surface {
+    @apply bg-navy-950/95;
+  }
+
+  html.light .mobile-menu-surface {
+    @apply bg-white/95;
+  }
+
+  .mobile-menu-item-active {
+    @apply bg-navy-700/70 text-ink-50;
+  }
+
+  html.light .mobile-menu-item-active {
+    @apply bg-ink-100 text-navy-900;
+  }
+}
+
+@layer utilities {
+  html.light .text-ink-50 {
+    @apply text-navy-900;
+  }
+
+  html.light .text-ink-100 {
+    @apply text-navy-800;
+  }
+
+  html.light .text-ink-300 {
+    @apply text-navy-700;
+  }
+
+  html.light .text-ink-400 {
+    @apply text-navy-600;
+  }
+
+  html.light .text-ink-500 {
+    @apply text-navy-500;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
