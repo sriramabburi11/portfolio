@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Star, Users, GitFork, BookMarked } from 'lucide-react';
+import { ExternalLink, Star, GitFork, BookMarked } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Card } from '@/components/ui/Card';
