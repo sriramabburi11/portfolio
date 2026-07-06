@@ -16,7 +16,7 @@ export const EMAILJS_CONFIG = {
 
 export const SOCIALS = {
   github: 'https://github.com/sriramabburi11',
-  linkedin: 'https://www.linkedin.com/in/sriram-abburi-961b48368',
+  linkedin: 'https://www.linkedin.com/in/sriramabburi11',
 } as const;
 
 export const GITHUB_USERNAME = 'sriramabburi11';
