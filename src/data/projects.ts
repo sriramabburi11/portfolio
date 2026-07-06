@@ -23,7 +23,7 @@ export const PROJECTS: Project[] = [
   },
   {
   id: 'personal-ai-advisor',
-  title: 'Personal AI Advisor',
+  title: 'Personal AI Financial Advisor',
   status: 'completed',
   description:'An AI-powered personal assistant that provides intelligent conversations, personalized guidance, and context-aware responses using modern LLMs and agent frameworks.',
   longDescription: 'Personal AI Advisor is an intelligent conversational assistant built with Python, Gradio, LangChain, and Large Language Models. It leverages agent-based workflows to understand user queries, maintain conversational context, and deliver accurate, personalized responses through an interactive web interface.',
