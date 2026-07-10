@@ -13,5 +13,5 @@ export const EDUCATION: EducationEntry = {
   institution: 'NxtWave Institute of Advanced Technologies',
   college: 'Chaitanya Deemed to be University',
   graduationYear: '2026',
-  cgpa: '9.87 / 10',
+  cgpa: '9.63 / 10',
 };
