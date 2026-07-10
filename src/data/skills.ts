@@ -4,7 +4,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     id: 'languages',
     title: 'Languages',
-    items: ['C++', 'JavaScript', 'TypeScript', 'SQL'],
+    items: ['C++', 'JavaScript', 'SQL', 'Python'],
   },
   {
     id: 'frontend',
@@ -19,12 +19,12 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     id: 'database',
     title: 'Database',
-    items: ['PostgreSQL', 'Prisma ORM', 'Redis'],
+    items: ['PostgreSQL', 'MongoDB'],
   },
   {
     id: 'devops',
     title: 'DevOps',
-    items: ['Docker', 'Git', 'GitHub'],
+    items: ['Docker', 'Git', 'GitHub', 'Vercel', 'Postman'],
   },
   {
     id: 'core-cs',
@@ -33,9 +33,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
       'Data Structures',
       'Algorithms',
       'OOP',
-      'DBMS',
-      'Operating Systems',
-      'Computer Networks',
+      'DBMS'
     ],
   },
   {
