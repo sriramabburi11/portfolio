@@ -4,27 +4,27 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     id: 'languages',
     title: 'Languages',
-    items: ['C++', 'JavaScript', 'SQL', 'Python'],
+    items: ['C++', 'JavaScript', 'Python'],
   },
   {
     id: 'frontend',
     title: 'Frontend',
-    items: ['React.js', 'HTML5', 'CSS3', 'Tailwind CSS'],
+    items: ['React.js', 'HTML', 'CSS', 'Tailwind CSS'],
   },
   {
     id: 'backend',
     title: 'Backend',
-    items: ['Node.js', 'Express.js', 'REST APIs', 'JWT Authentication'],
+    items: ['Node.js', 'Express.js'],
   },
   {
     id: 'database',
     title: 'Database',
-    items: ['PostgreSQL', 'MongoDB'],
+    items: ['SQL', 'MongoDB'],
   },
   {
     id: 'devops',
     title: 'DevOps',
-    items: ['Docker', 'Git', 'GitHub', 'Vercel', 'Postman'],
+    items: ['Vercel', 'Postman'],
   },
   {
     id: 'core-cs',
@@ -44,9 +44,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
       'Agentic AI',
       'RAG',
       'Prompt Engineering',
-      'LLM Evaluation',
-      'LangChain',
-      'LangGraph',
       'Gradio',
       'Google Gemini',
     ],
