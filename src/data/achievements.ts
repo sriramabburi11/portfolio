@@ -14,13 +14,13 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     id: 'leetcode',
     label: 'LeetCode Problems Solved',
-    value: '130+',
+    value: '150+',
     icon: Trophy,
   },
   {
     id: 'github-contributions',
     label: 'GitHub Contributions',
-    value: '28+',
+    value: '40+',
     icon: GitBranch,
   },
   {
@@ -32,8 +32,8 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     id: 'hackathons',
     label: 'Hackathons',
-    value: 'Coming soon',
+    value: 'Build To Ship',
     icon: Award,
-    note: 'Planned for upcoming semester',
+    note: 'By NIAT',
   },
 ];
