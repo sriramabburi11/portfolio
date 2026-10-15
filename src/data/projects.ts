@@ -9,7 +9,7 @@ export const PROJECTS: Project[] = [
       'AI-powered resume analysis platform that evaluates resumes and provides actionable suggestions to improve ATS compatibility.',
     longDescription:
       'AI Resume Analyzer & ATS Optimizer helps students and job seekers improve their resumes by analyzing resume structure, content quality, and estimated ATS compatibility. Users can provide a job description to identify relevant keyword matches and skill gaps, receive AI-generated improvement suggestions, and discover missing resume sections to strengthen their applications.',
-    image: '/projects/ai-resume-analyzer.svg',
+    image: '/projects/ai_resume_analyzer.svg',
     technologies: [
       'React.js',
       'Node.js',
