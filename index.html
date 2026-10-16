@@ -21,7 +21,9 @@
     <script>
       (function () {
         try {
-          var stored = localStorage.getItem('portfolio-theme');
+          // Clear legacy localStorage cached theme
+          localStorage.removeItem('portfolio-theme');
+          var stored = sessionStorage.getItem('portfolio-theme');
           if (stored === 'light') {
             document.documentElement.classList.remove('dark');
             document.documentElement.classList.add('light');

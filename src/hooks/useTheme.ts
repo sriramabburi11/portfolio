@@ -7,8 +7,14 @@ const STORAGE_KEY = 'portfolio-theme';
 function getInitialTheme(): Theme {
   if (typeof window === 'undefined') return 'dark';
 
-  const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored === 'dark' || stored === 'light') return stored;
+  try {
+    // Purge any legacy localStorage value to guarantee fresh link opens start in dark mode
+    window.localStorage.removeItem(STORAGE_KEY);
+    const stored = window.sessionStorage.getItem(STORAGE_KEY);
+    if (stored === 'dark' || stored === 'light') return stored;
+  } catch {
+    // Ignore storage errors in restricted environments
+  }
 
   return 'dark';
 }
@@ -20,7 +26,12 @@ export function useTheme(): { theme: Theme; toggleTheme: () => void } {
     const root = document.documentElement;
     root.classList.toggle('light', theme === 'light');
     root.classList.toggle('dark', theme === 'dark');
-    window.localStorage.setItem(STORAGE_KEY, theme);
+
+    try {
+      window.sessionStorage.setItem(STORAGE_KEY, theme);
+    } catch {
+      // Ignore storage errors
+    }
 
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (metaThemeColor) {
