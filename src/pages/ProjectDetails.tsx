@@ -38,7 +38,7 @@ export function ProjectDetails() {
             <ArrowLeft size={14} /> back to projects
           </Link>
 
-          <div className="mt-6 overflow-hidden rounded-xl border border-navy-600/60 light:border-slate-200/90 light:shadow-sm">
+          <div className="mt-6 overflow-hidden rounded-xl border border-navy-600/60 light:border-[#DCE3EC] light:shadow-sm">
             <img
               src={project.image}
               alt={`${project.title} preview`}

@@ -25,7 +25,7 @@ export function useTheme(): { theme: Theme; toggleTheme: () => void } {
 
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', theme === 'light' ? '#FAFAFC' : '#0B1120');
+      metaThemeColor.setAttribute('content', theme === 'light' ? '#F1F4F8' : '#0B1120');
     }
   }, [theme]);
 

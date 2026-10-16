@@ -9,7 +9,7 @@ interface BadgeProps {
 
 const TONE_STYLES: Record<NonNullable<BadgeProps['tone']>, string> = {
   default:
-    'border-navy-600/70 bg-navy-700/60 text-ink-300 light:border-slate-200/90 light:bg-slate-100/90 light:text-slate-700 light:font-medium light:hover:border-slate-300',
+    'border-navy-600/70 bg-navy-700/60 text-ink-300 light:border-[#DCE3EC] light:bg-[#E8EEF5]/80 light:text-[#374151] light:font-medium light:hover:border-slate-300',
   accent:
     'border-accent-500/40 bg-accent-500/10 text-accent-400 light:border-indigo-200/80 light:bg-indigo-50/80 light:text-indigo-700 light:font-medium light:hover:border-indigo-300',
   amber:

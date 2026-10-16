@@ -15,7 +15,7 @@ const FOCUS_AREAS = [
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-24 py-24">
+    <section id="about" className="scroll-mt-24 py-24 section-alt border-y border-transparent light:border-[#DCE3EC]/60">
       <Container>
         <SectionHeading index="01 about" title="About" />
 

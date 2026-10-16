@@ -13,7 +13,7 @@ export function Hero() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] light:bg-[linear-gradient(to_right,rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:44px_44px]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] light:bg-[linear-gradient(to_right,rgba(31,41,55,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(31,41,55,0.03)_1px,transparent_1px)] bg-[size:44px_44px]"
       />
 
       <Container>
@@ -78,7 +78,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-14 inline-flex items-center gap-2 rounded-md font-mono text-xs text-ink-400 light:bg-slate-100/70 light:border light:border-slate-200/60 light:px-2.5 light:py-1">
+          <div className="mt-14 inline-flex items-center gap-2 rounded-md font-mono text-xs text-ink-400 light:bg-[#E8EEF5] light:border light:border-[#DCE3EC] light:px-2.5 light:py-1">
             <span className="font-bold text-accent-400">$</span>
             <span>whoami</span>
             <span className="h-4 w-[2px] animate-blink bg-ink-400" />

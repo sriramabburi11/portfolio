@@ -36,7 +36,7 @@ export function MobileMenu({
               type="button"
               onClick={onClose}
               aria-label="Close navigation menu"
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-navy-600/70 text-ink-300 light:border-slate-200/90 light:bg-slate-100 light:text-slate-600 active:scale-95"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-navy-600/70 text-ink-300 light:border-[#DCE3EC] light:bg-[#FAFBFD] light:text-[#4B5563] active:scale-95"
             >
               {closeIcon}
             </button>
@@ -55,7 +55,7 @@ export function MobileMenu({
                   'rounded-lg px-4 py-3.5 text-left font-mono text-sm transition-colors',
                   activeId === item.id
                     ? 'mobile-menu-item-active'
-                    : 'text-ink-400 light:text-slate-600 light:hover:bg-slate-100/80 light:hover:text-slate-900',
+                    : 'text-ink-400 light:text-[#4B5563] light:hover:bg-[#E8EEF5] light:hover:text-[#1F2937]',
                 )}
               >
                 <span className="mr-3 font-semibold text-accent-400">

@@ -19,16 +19,16 @@
   }
 
   html.light body {
-    @apply bg-light-bg text-light-text-secondary;
-    background-color: #FAFAFC;
-    color: #1E293B;
+    @apply bg-light-bg text-light-text-primary;
+    background-color: #F1F4F8;
+    color: #1F2937;
   }
 
   html.light h1,
   html.light h2,
   html.light h3,
   html.light h4 {
-    color: #0F172A;
+    color: #1F2937;
     letter-spacing: -0.025em;
   }
 
@@ -65,12 +65,12 @@
   }
 
   html.light ::-webkit-scrollbar-track {
-    background-color: #FAFAFC;
+    background-color: #F1F4F8;
   }
 
   html.light ::-webkit-scrollbar-thumb {
-    background-color: #E2E8F0;
-    border: 2px solid #FAFAFC;
+    background-color: #DCE3EC;
+    border: 2px solid #F1F4F8;
     border-radius: 9999px;
   }
 
@@ -98,14 +98,14 @@
   }
 
   html.light .card-surface {
-    border-color: #E2E8F0;
-    background-color: #FFFFFF;
-    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
+    border-color: #DCE3EC;
+    background-color: #FAFBFD;
+    box-shadow: 0 1px 3px 0 rgba(31, 41, 55, 0.04), 0 1px 2px -1px rgba(31, 41, 55, 0.02);
   }
 
   html.light .card-surface:hover {
     border-color: #CBD5E1;
-    box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.07), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+    box-shadow: 0 10px 24px -4px rgba(31, 41, 55, 0.06), 0 4px 8px -2px rgba(31, 41, 55, 0.03);
   }
 
   .navbar-scrolled {
@@ -113,11 +113,11 @@
   }
 
   html.light .navbar-scrolled {
-    border-bottom: 1px solid #E2E8F0;
-    background-color: rgba(250, 250, 252, 0.88);
+    border-bottom: 1px solid #DCE3EC;
+    background-color: rgba(241, 244, 248, 0.88);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03);
+    box-shadow: 0 1px 3px 0 rgba(31, 41, 55, 0.03);
   }
 
   .mobile-menu-surface {
@@ -125,9 +125,9 @@
   }
 
   html.light .mobile-menu-surface {
-    background-color: rgba(255, 255, 255, 0.98);
-    border-left: 1px solid #E2E8F0;
-    box-shadow: -4px 0 24px rgba(15, 23, 42, 0.06);
+    background-color: rgba(250, 251, 253, 0.98);
+    border-left: 1px solid #DCE3EC;
+    box-shadow: -4px 0 24px rgba(31, 41, 55, 0.06);
   }
 
   .mobile-menu-item-active {
@@ -139,23 +139,31 @@
     color: #4338CA;
     font-weight: 600;
   }
+
+  .section-alt {
+    @apply transition-colors duration-200;
+  }
+
+  html.light .section-alt {
+    background-color: #E8EEF5;
+  }
 }
 
 @layer utilities {
   html.light .text-ink-50 {
-    color: #0F172A;
+    color: #1F2937;
   }
 
   html.light .text-ink-100 {
-    color: #1E293B;
+    color: #1F2937;
   }
 
   html.light .text-ink-200 {
-    color: #334155;
+    color: #374151;
   }
 
   html.light .text-ink-300 {
-    color: #475569;
+    color: #4B5563;
   }
 
   html.light .text-ink-400 {
@@ -188,12 +196,12 @@
   html.light .border-navy-600\/60,
   html.light .border-navy-600,
   html.light .border-navy-500 {
-    border-color: #E2E8F0;
+    border-color: #DCE3EC;
   }
 
   html.light .divide-navy-700\/60 > :not([hidden]) ~ :not([hidden]),
   html.light .divide-navy-700\/70 > :not([hidden]) ~ :not([hidden]) {
-    border-color: #E2E8F0;
+    border-color: #DCE3EC;
   }
 }
 

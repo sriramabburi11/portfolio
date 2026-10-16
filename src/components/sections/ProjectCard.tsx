@@ -23,7 +23,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       className="h-full"
     >
       <Card className="group flex h-full flex-col overflow-hidden !p-0">
-        <div className="relative overflow-hidden border-b border-navy-700/60 light:border-slate-100 bg-navy-950/40 light:bg-slate-50">
+        <div className="relative overflow-hidden border-b border-navy-700/60 light:border-[#DCE3EC] bg-navy-950/40 light:bg-[#E8EEF5]/40">
           <img
             src={project.image}
             alt={`${project.title} preview`}
@@ -69,7 +69,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </ul>
           </div>
 
-          <div className="mt-6 flex flex-wrap items-center gap-2 pt-4 border-t border-navy-700/60 light:border-slate-100">
+          <div className="mt-6 flex flex-wrap items-center gap-2 pt-4 border-t border-navy-700/60 light:border-[#DCE3EC]">
             {project.githubUrl && (
               <Button
                 as="a"
@@ -102,7 +102,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             )}
             <Link
               to={`/projects/${project.id}`}
-              className="inline-flex items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-xs sm:text-sm font-medium text-ink-300 transition-colors duration-200 hover:text-accent-400 light:text-slate-600 light:hover:text-indigo-600 light:hover:bg-indigo-50/70"
+              className="inline-flex items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-xs sm:text-sm font-medium text-ink-300 transition-colors duration-200 hover:text-accent-400 light:text-[#4B5563] light:hover:text-indigo-600 light:hover:bg-[#E8EEF5]"
             >
               <Info size={14} />
               Details

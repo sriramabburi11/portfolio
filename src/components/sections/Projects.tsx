@@ -5,7 +5,7 @@ import { PROJECTS } from '@/data/projects';
 
 export function Projects() {
   return (
-    <section id="projects" className="scroll-mt-24 py-24">
+    <section id="projects" className="scroll-mt-24 py-24 section-alt border-y border-transparent light:border-[#DCE3EC]/60">
       <Container>
         <SectionHeading
           index="03 projects"

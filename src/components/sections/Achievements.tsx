@@ -6,7 +6,7 @@ import { ACHIEVEMENTS } from '@/data/achievements';
 
 export function Achievements() {
   return (
-    <section id="achievements" className="scroll-mt-24 py-24">
+    <section id="achievements" className="scroll-mt-24 py-24 section-alt border-y border-transparent light:border-[#DCE3EC]/60">
       <Container>
         <SectionHeading index="05 achievements" title="Achievements" />
 

@@ -54,7 +54,7 @@ export function GithubStats() {
                   <img
                     src={profile.avatar_url}
                     alt={`${profile.login} avatar`}
-                    className="h-20 w-20 rounded-full border border-navy-600/70 light:border-slate-200/90 light:shadow-sm"
+                    className="h-20 w-20 rounded-full border border-navy-600/70 light:border-[#DCE3EC] light:shadow-sm"
                     loading="lazy"
                   />
                   <h3 className="mt-4 text-base font-bold text-ink-50">
@@ -62,7 +62,7 @@ export function GithubStats() {
                   </h3>
                   <p className="font-mono text-xs text-ink-400">@{profile.login}</p>
 
-                  <div className="mt-5 grid w-full grid-cols-3 gap-2 border-t border-navy-700/70 light:border-slate-200/90 pt-5 text-center">
+                  <div className="mt-5 grid w-full grid-cols-3 gap-2 border-t border-navy-700/70 light:border-[#DCE3EC] pt-5 text-center">
                     <div>
                       <p className="text-base font-bold text-ink-100">
                         {profile.public_repos}
@@ -110,9 +110,9 @@ export function GithubStats() {
                       No public repositories to show yet.
                     </p>
                   ) : (
-                    <ul className="mt-4 divide-y divide-navy-700/60 light:divide-slate-100">
+                    <ul className="mt-4 divide-y divide-navy-700/60 light:divide-[#DCE3EC]">
                       {repos.slice(0, 6).map((repo) => (
-                        <li key={repo.id} className="group flex items-center justify-between py-3 transition-colors rounded-lg px-2 hover:bg-navy-700/20 light:hover:bg-slate-50/80">
+                        <li key={repo.id} className="group flex items-center justify-between py-3 transition-colors rounded-lg px-2 hover:bg-navy-700/20 light:hover:bg-[#E8EEF5]/70">
                           <div className="min-w-0 pr-4">
                             <a
                               href={repo.html_url}
@@ -143,7 +143,7 @@ export function GithubStats() {
             </div>
           )}
 
-          <Card className="mt-6 flex items-center gap-3 text-xs text-ink-400 light:bg-slate-50/70 light:border-slate-200/70">
+          <Card className="mt-6 flex items-center gap-3 text-xs text-ink-400 light:bg-[#E8EEF5]/60 light:border-[#DCE3EC]">
             <GitFork size={14} className="flex-shrink-0 text-accent-400" />
             Contribution graph placeholder — swap in a calendar heatmap once a
             GitHub token-backed endpoint is available.

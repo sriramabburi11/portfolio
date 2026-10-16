@@ -39,7 +39,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="scroll-mt-24 py-24">
+    <section id="contact" className="scroll-mt-24 py-24 section-alt border-y border-transparent light:border-[#DCE3EC]/60">
       <Container>
         <SectionHeading
           index="08 contact"
@@ -59,7 +59,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="name"
-                  className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-ink-300 light:text-slate-700"
+                  className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-ink-300 light:text-[#374151]"
                 >
                   Name
                 </label>
@@ -68,7 +68,7 @@ export function Contact() {
                   type="text"
                   placeholder="Your full name"
                   aria-invalid={errors.name ? 'true' : 'false'}
-                  className="w-full rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none transition-all focus:border-accent-400 light:border-slate-200/90 light:bg-slate-50/70 light:text-slate-900 light:placeholder-slate-400 light:focus:bg-white light:focus:border-indigo-600 light:focus:ring-4 light:focus:ring-indigo-500/10"
+                  className="w-full rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none transition-all focus:border-accent-400 light:border-[#DCE3EC] light:bg-[#FAFBFD] light:text-[#1F2937] light:placeholder-slate-400 light:focus:bg-white light:focus:border-indigo-600 light:focus:ring-4 light:focus:ring-indigo-500/10"
                   {...register('name', { required: 'Please enter your name.' })}
                 />
                 {errors.name && (
@@ -81,7 +81,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-ink-300 light:text-slate-700"
+                  className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-ink-300 light:text-[#374151]"
                 >
                   Email
                 </label>
@@ -90,7 +90,7 @@ export function Contact() {
                   type="email"
                   placeholder="you@domain.com"
                   aria-invalid={errors.email ? 'true' : 'false'}
-                  className="w-full rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none transition-all focus:border-accent-400 light:border-slate-200/90 light:bg-slate-50/70 light:text-slate-900 light:placeholder-slate-400 light:focus:bg-white light:focus:border-indigo-600 light:focus:ring-4 light:focus:ring-indigo-500/10"
+                  className="w-full rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none transition-all focus:border-accent-400 light:border-[#DCE3EC] light:bg-[#FAFBFD] light:text-[#1F2937] light:placeholder-slate-400 light:focus:bg-white light:focus:border-indigo-600 light:focus:ring-4 light:focus:ring-indigo-500/10"
                   {...register('email', {
                     required: 'Please enter your email.',
                     pattern: {
@@ -109,7 +109,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-ink-300 light:text-slate-700"
+                  className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-ink-300 light:text-[#374151]"
                 >
                   Message
                 </label>
@@ -118,7 +118,7 @@ export function Contact() {
                   rows={5}
                   placeholder="How can I help you?"
                   aria-invalid={errors.message ? 'true' : 'false'}
-                  className="w-full resize-none rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none transition-all focus:border-accent-400 light:border-slate-200/90 light:bg-slate-50/70 light:text-slate-900 light:placeholder-slate-400 light:focus:bg-white light:focus:border-indigo-600 light:focus:ring-4 light:focus:ring-indigo-500/10"
+                  className="w-full resize-none rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none transition-all focus:border-accent-400 light:border-[#DCE3EC] light:bg-[#FAFBFD] light:text-[#1F2937] light:placeholder-slate-400 light:focus:bg-white light:focus:border-indigo-600 light:focus:ring-4 light:focus:ring-indigo-500/10"
                   {...register('message', {
                     required: 'Please add a short message.',
                     minLength: { value: 10, message: 'Message should be at least 10 characters.' },
@@ -137,7 +137,7 @@ export function Contact() {
                 </Button>
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-ink-400 hover:text-accent-400 light:text-slate-600 light:hover:text-indigo-600 transition-colors"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-ink-400 hover:text-accent-400 light:text-[#4B5563] light:hover:text-indigo-600 transition-colors"
                 >
                   <Mail size={14} /> {SITE.email}
                 </a>

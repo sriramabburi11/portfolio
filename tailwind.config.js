@@ -33,16 +33,17 @@ export default {
           green: '#3BC08A',
         },
         light: {
-          bg: '#FAFAFC',
-          surface: '#FFFFFF',
-          'surface-subtle': '#F4F5F7',
-          border: '#E2E8F0',
-          'border-subtle': '#F1F5F9',
+          bg: '#F1F4F8',
+          'bg-alt': '#E8EEF5',
+          surface: '#FAFBFD',
+          'surface-subtle': '#E8EEF5',
+          border: '#DCE3EC',
+          'border-subtle': '#E8EEF5',
           'border-hover': '#CBD5E1',
           text: {
-            primary: '#0F172A',
-            secondary: '#1E293B',
-            body: '#475569',
+            primary: '#1F2937',
+            secondary: '#374151',
+            body: '#4B5563',
             muted: '#64748B',
             subtle: '#94A3B8',
           },
@@ -78,13 +79,13 @@ export default {
         'grid-fade':
           'linear-gradient(to bottom, rgba(59,111,224,0.06), transparent 60%)',
         'grid-fade-light':
-          'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(79,70,229,0.06), transparent 70%)',
+          'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(79,70,229,0.05), transparent 70%)',
       },
       boxShadow: {
         xs: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
         card: '0 1px 0 0 rgba(255,255,255,0.03) inset, 0 8px 24px -12px rgba(0,0,0,0.5)',
-        'card-light': '0 1px 3px 0 rgba(15,23,42,0.04), 0 1px 2px -1px rgba(15,23,42,0.02)',
-        'card-light-hover': '0 12px 28px -4px rgba(15,23,42,0.07), 0 4px 10px -2px rgba(15,23,42,0.03)',
+        'card-light': '0 1px 3px 0 rgba(31,41,55,0.04), 0 1px 2px -1px rgba(31,41,55,0.02)',
+        'card-light-hover': '0 10px 24px -4px rgba(31,41,55,0.06), 0 4px 8px -2px rgba(31,41,55,0.03)',
       },
       keyframes: {
         blink: {

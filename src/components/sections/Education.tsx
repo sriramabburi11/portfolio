@@ -29,10 +29,10 @@ export function Education() {
               <p className="mt-1 text-sm font-semibold text-ink-200">{EDUCATION.institution}</p>
               <p className="mt-1 text-sm text-ink-300">{EDUCATION.college}</p>
               <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs text-ink-400">
-                <span className="inline-flex items-center rounded-md bg-navy-700/50 light:bg-slate-100/90 light:border light:border-slate-200/60 px-2 py-1">
+                <span className="inline-flex items-center rounded-md bg-navy-700/50 light:bg-[#E8EEF5] light:border light:border-[#DCE3EC] px-2.5 py-1">
                   graduation: {EDUCATION.graduationYear}
                 </span>
-                <span className="inline-flex items-center rounded-md bg-navy-700/50 light:bg-slate-100/90 light:border light:border-slate-200/60 px-2 py-1">
+                <span className="inline-flex items-center rounded-md bg-navy-700/50 light:bg-[#E8EEF5] light:border light:border-[#DCE3EC] px-2.5 py-1">
                   cgpa: {EDUCATION.cgpa}
                 </span>
               </div>
