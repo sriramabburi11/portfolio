@@ -24,14 +24,16 @@ export function Skills() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
             >
-              <Card className="h-full">
-                <h3 className="text-sm font-semibold text-ink-100">
-                  {group.title}
-                </h3>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <Badge key={item}>{item}</Badge>
-                  ))}
+              <Card className="h-full flex flex-col justify-between">
+                <div>
+                  <h3 className="text-sm font-semibold text-ink-100">
+                    {group.title}
+                  </h3>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <Badge key={item}>{item}</Badge>
+                    ))}
+                  </div>
                 </div>
               </Card>
             </motion.div>

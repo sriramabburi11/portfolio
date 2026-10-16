@@ -21,16 +21,16 @@ export function Achievements() {
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
               >
-                <Card className="h-full text-center">
-                  <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400">
+                <Card className="h-full text-center p-6 sm:p-7 flex flex-col items-center justify-center">
+                  <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400 light:border light:border-indigo-100 light:bg-indigo-50/80 light:text-indigo-600">
                     <Icon size={20} />
                   </span>
-                  <p className="mt-4 text-2xl font-semibold text-ink-50">
+                  <p className="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-ink-50">
                     {item.value}
                   </p>
-                  <p className="mt-1 text-xs text-ink-400">{item.label}</p>
+                  <p className="mt-1 text-xs sm:text-sm font-semibold text-ink-200">{item.label}</p>
                   {item.note && (
-                    <p className="mt-2 font-mono text-[11px] text-ink-500">
+                    <p className="mt-2 font-mono text-[11px] text-ink-400">
                       {item.note}
                     </p>
                   )}

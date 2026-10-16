@@ -9,15 +9,15 @@ export function NotFound() {
       <Seo title="Page not found" />
       <Container className="flex min-h-screen flex-col items-center justify-center text-center">
         <p className="eyebrow">404</p>
-        <h1 className="mt-3 text-2xl font-semibold">
+        <h1 className="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-ink-50">
           This page doesn't exist.
         </h1>
-        <p className="mt-2 text-sm text-ink-400">
+        <p className="mt-2 text-sm sm:text-base text-ink-300">
           The route you followed may be broken, or the page may have moved.
         </p>
         <Link
           to="/"
-          className="mt-6 inline-flex items-center gap-2 font-mono text-sm text-accent-400 hover:underline"
+          className="mt-6 inline-flex items-center gap-2 font-mono text-sm font-semibold text-accent-400 hover:underline"
         >
           <ArrowLeft size={14} /> Back to home
         </Link>

@@ -10,7 +10,7 @@ const FOCUS_AREAS = [
   'REST API Design',
   'Database Design',
   'Scalable Systems',
-  'Agentic AI & LLM Applications'
+  'Agentic AI & LLM Applications',
 ];
 
 export function About() {
@@ -25,16 +25,16 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-3"
+            className="lg:col-span-3 space-y-4"
           >
-            <p className="text-base leading-relaxed text-ink-300">
+            <p className="text-[15px] sm:text-base leading-relaxed text-ink-300 font-normal">
               I'm a Computer Science undergraduate who enjoys working across the
               stack, with a particular focus on backend engineering. I like
               designing REST APIs and database schemas that hold up under real
               usage, and building full-stack applications where the frontend and
               backend genuinely fit together.
             </p>
-            <p className="mt-4 text-base leading-relaxed text-ink-300">
+            <p className="text-[15px] sm:text-base leading-relaxed text-ink-300 font-normal">
               A lot of my recent work sits at the intersection of scalable
               systems and AI-powered applications — thinking through
               authentication, caching, and multi-tenant architecture while also
@@ -58,9 +58,9 @@ export function About() {
                 {FOCUS_AREAS.map((area) => (
                   <li
                     key={area}
-                    className="flex items-center gap-2.5 text-sm text-ink-300"
+                    className="flex items-center gap-2.5 text-sm font-medium text-ink-200"
                   >
-                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent-400" />
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent-400 light:bg-indigo-600" />
                     {area}
                   </li>
                 ))}

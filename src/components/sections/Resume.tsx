@@ -19,16 +19,16 @@ export function Resume() {
           transition={{ duration: 0.5 }}
           className="mt-10 max-w-2xl"
         >
-          <Card className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <Card className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between p-6 sm:p-7">
             <div className="flex items-center gap-4">
-              <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400">
+              <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400 light:border light:border-indigo-100 light:bg-indigo-50/80 light:text-indigo-600">
                 <FileText size={20} />
               </span>
               <div>
-                <h3 className="text-sm font-semibold text-ink-50">
+                <h3 className="text-base font-bold text-ink-50">
                   {SITE.name} — Resume
                 </h3>
-                <p className="mt-1 text-xs text-ink-500">PDF · updated regularly</p>
+                <p className="mt-1 text-xs font-mono text-ink-400">PDF · updated regularly</p>
               </div>
             </div>
 

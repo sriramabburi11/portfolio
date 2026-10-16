@@ -18,19 +18,23 @@ export function Education() {
           transition={{ duration: 0.5 }}
           className="mt-10 max-w-2xl"
         >
-          <Card className="flex items-start gap-4">
-            <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400">
+          <Card className="flex items-start gap-4 p-6 sm:p-7">
+            <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400 light:border light:border-indigo-100 light:bg-indigo-50/80 light:text-indigo-600">
               <GraduationCap size={20} />
             </span>
             <div>
-              <h3 className="text-base font-semibold text-ink-50">
+              <h3 className="text-base font-bold text-ink-50">
                 {EDUCATION.degree}, {EDUCATION.field}
               </h3>
-              <p className="mt-1 text-sm text-ink-400">{EDUCATION.institution}</p>
-              <p className="mt-1 text-sm text-ink-400">{EDUCATION.college}</p>
-              <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs text-ink-500">
-                <span>graduation: {EDUCATION.graduationYear}</span>
-                <span>cgpa: {EDUCATION.cgpa}</span>
+              <p className="mt-1 text-sm font-semibold text-ink-200">{EDUCATION.institution}</p>
+              <p className="mt-1 text-sm text-ink-300">{EDUCATION.college}</p>
+              <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs text-ink-400">
+                <span className="inline-flex items-center rounded-md bg-navy-700/50 light:bg-slate-100/90 light:border light:border-slate-200/60 px-2 py-1">
+                  graduation: {EDUCATION.graduationYear}
+                </span>
+                <span className="inline-flex items-center rounded-md bg-navy-700/50 light:bg-slate-100/90 light:border light:border-slate-200/60 px-2 py-1">
+                  cgpa: {EDUCATION.cgpa}
+                </span>
               </div>
             </div>
           </Card>

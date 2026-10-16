@@ -8,51 +8,85 @@
   }
 
   body {
-    @apply bg-navy-900 font-body text-ink-100;
+    @apply bg-navy-900 font-body text-ink-100 antialiased transition-colors duration-200;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply font-display text-ink-50;
+    @apply font-display text-ink-50 tracking-tight;
+  }
+
+  html.light body {
+    @apply bg-light-bg text-light-text-secondary;
+    background-color: #FAFAFC;
+    color: #1E293B;
   }
 
   html.light h1,
   html.light h2,
   html.light h3,
   html.light h4 {
-    @apply text-navy-900;
+    color: #0F172A;
+    letter-spacing: -0.025em;
   }
 
   ::selection {
     @apply bg-accent-500/30 text-ink-50;
   }
 
+  html.light ::selection {
+    background-color: #EEF2FF;
+    color: #4338CA;
+  }
+
   :focus-visible {
     outline: 2px solid theme('colors.accent.400');
     outline-offset: 3px;
-    border-radius: 2px;
+    border-radius: 6px;
+  }
+
+  html.light :focus-visible {
+    outline: 2px solid #4F46E5;
+    outline-offset: 2px;
   }
 
   ::-webkit-scrollbar {
     width: 10px;
   }
+
   ::-webkit-scrollbar-track {
     @apply bg-navy-900;
   }
+
   ::-webkit-scrollbar-thumb {
     @apply bg-navy-600 rounded-full;
   }
 
-  html.light body {
-    @apply bg-ink-50 text-navy-800;
+  html.light ::-webkit-scrollbar-track {
+    background-color: #FAFAFC;
+  }
+
+  html.light ::-webkit-scrollbar-thumb {
+    background-color: #E2E8F0;
+    border: 2px solid #FAFAFC;
+    border-radius: 9999px;
+  }
+
+  html.light ::-webkit-scrollbar-thumb:hover {
+    background-color: #CBD5E1;
   }
 }
 
 @layer components {
   .eyebrow {
-    @apply font-mono text-xs tracking-widest uppercase text-accent-400;
+    @apply font-mono text-xs uppercase tracking-wider text-accent-400 font-medium;
+  }
+
+  html.light .eyebrow {
+    color: #4F46E5;
+    font-weight: 600;
   }
 
   .container-page {
@@ -60,18 +94,30 @@
   }
 
   .card-surface {
-    @apply rounded-xl border border-navy-600/60 bg-navy-800/80 shadow-card backdrop-blur-sm;
+    @apply rounded-xl border border-navy-600/60 bg-navy-800/80 shadow-card backdrop-blur-sm transition-all duration-300;
   }
 
   html.light .card-surface {
-    @apply border-ink-300/40 bg-white shadow-none;
+    border-color: #E2E8F0;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
   }
+
+  html.light .card-surface:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.07), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+  }
+
   .navbar-scrolled {
-  @apply border-b border-navy-700/70 bg-navy-900/85 backdrop-blur-md;
+    @apply border-b border-navy-700/70 bg-navy-900/85 backdrop-blur-md;
   }
 
   html.light .navbar-scrolled {
-    @apply border-b border-ink-300/50 bg-white/85;
+    border-bottom: 1px solid #E2E8F0;
+    background-color: rgba(250, 250, 252, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03);
   }
 
   .mobile-menu-surface {
@@ -79,7 +125,9 @@
   }
 
   html.light .mobile-menu-surface {
-    @apply bg-white/95;
+    background-color: rgba(255, 255, 255, 0.98);
+    border-left: 1px solid #E2E8F0;
+    box-shadow: -4px 0 24px rgba(15, 23, 42, 0.06);
   }
 
   .mobile-menu-item-active {
@@ -87,29 +135,65 @@
   }
 
   html.light .mobile-menu-item-active {
-    @apply bg-ink-100 text-navy-900;
+    background-color: #EEF2FF;
+    color: #4338CA;
+    font-weight: 600;
   }
 }
 
 @layer utilities {
   html.light .text-ink-50 {
-    @apply text-navy-900;
+    color: #0F172A;
   }
 
   html.light .text-ink-100 {
-    @apply text-navy-800;
+    color: #1E293B;
+  }
+
+  html.light .text-ink-200 {
+    color: #334155;
   }
 
   html.light .text-ink-300 {
-    @apply text-navy-700;
+    color: #475569;
   }
 
   html.light .text-ink-400 {
-    @apply text-navy-600;
+    color: #64748B;
   }
 
   html.light .text-ink-500 {
-    @apply text-navy-500;
+    color: #94A3B8;
+  }
+
+  html.light .text-accent-400 {
+    color: #4F46E5;
+  }
+
+  html.light .hover\:text-accent-400:hover {
+    color: #4338CA;
+  }
+
+  html.light .text-signal-amber {
+    color: #B45309;
+  }
+
+  html.light .text-signal-green {
+    color: #15803D;
+  }
+
+  html.light .border-navy-700\/70,
+  html.light .border-navy-700\/60,
+  html.light .border-navy-600\/70,
+  html.light .border-navy-600\/60,
+  html.light .border-navy-600,
+  html.light .border-navy-500 {
+    border-color: #E2E8F0;
+  }
+
+  html.light .divide-navy-700\/60 > :not([hidden]) ~ :not([hidden]),
+  html.light .divide-navy-700\/70 > :not([hidden]) ~ :not([hidden]) {
+    border-color: #E2E8F0;
   }
 }
 

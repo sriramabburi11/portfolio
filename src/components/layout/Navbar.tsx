@@ -33,15 +33,15 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => handleNavigate('home')}
-            className="font-mono text-sm font-medium text-ink-100"
+            className="font-mono text-sm font-semibold text-ink-100 transition-colors hover:text-accent-400"
             aria-label="Go to home section"
           >
-            <span className="text-accent-400">~/</span>sriram-abburi
+            <span className="text-accent-400 font-bold">~/</span>sriram-abburi
           </button>
 
           <nav
             aria-label="Primary"
-            className="hidden items-center gap-1 rounded-lg border border-navy-700/70 bg-navy-800/60 p-1 lg:flex"
+            className="hidden items-center gap-1 rounded-full border border-navy-700/70 bg-navy-800/60 p-1 lg:flex light:border-slate-200/90 light:bg-slate-100/90 light:shadow-xs"
           >
             {NAV_ITEMS.map((item) => (
               <button
@@ -50,16 +50,16 @@ export function Navbar() {
                 onClick={() => handleNavigate(item.id)}
                 aria-current={activeId === item.id ? 'true' : undefined}
                 className={cn(
-                  'relative rounded-md px-3 py-1.5 font-mono text-xs transition-colors',
+                  'relative rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors',
                   activeId === item.id
-                    ? 'text-ink-50'
+                    ? 'text-ink-50 font-semibold'
                     : 'text-ink-400 hover:text-ink-100',
                 )}
               >
                 {activeId === item.id && (
                   <motion.span
                     layoutId="nav-active-pill"
-                    className="absolute inset-0 rounded-md bg-navy-600/80"
+                    className="absolute inset-0 rounded-full bg-navy-600/80 light:bg-white light:border light:border-slate-200/80 light:shadow-xs"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -73,7 +73,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setIsMenuOpen(true)}
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-navy-600/70 text-ink-300 lg:hidden"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-navy-600/70 text-ink-300 lg:hidden light:border-slate-200/90 light:bg-white light:text-slate-600 light:hover:border-slate-300 light:hover:text-indigo-600 light:shadow-xs active:scale-95"
               aria-label="Open navigation menu"
               aria-expanded={isMenuOpen}
             >

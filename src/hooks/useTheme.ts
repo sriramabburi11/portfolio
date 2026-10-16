@@ -20,7 +20,13 @@ export function useTheme(): { theme: Theme; toggleTheme: () => void } {
   useEffect(() => {
     const root = document.documentElement;
     root.classList.toggle('light', theme === 'light');
+    root.classList.toggle('dark', theme === 'dark');
     window.localStorage.setItem(STORAGE_KEY, theme);
+
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', theme === 'light' ? '#FAFAFC' : '#0B1120');
+    }
   }, [theme]);
 
   const toggleTheme = useCallback(() => {

@@ -36,13 +36,13 @@ export function MobileMenu({
               type="button"
               onClick={onClose}
               aria-label="Close navigation menu"
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-navy-600/70 text-ink-300"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-navy-600/70 text-ink-300 light:border-slate-200/90 light:bg-slate-100 light:text-slate-600 active:scale-95"
             >
               {closeIcon}
             </button>
           </div>
 
-          <nav aria-label="Mobile" className="flex flex-col gap-1 px-6 pb-10">
+          <nav aria-label="Mobile" className="flex flex-col gap-1.5 px-6 pb-10">
             {NAV_ITEMS.map((item, index) => (
               <motion.button
                 key={item.id}
@@ -52,13 +52,13 @@ export function MobileMenu({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.04 }}
                 className={cn(
-                  'rounded-lg px-4 py-3.5 text-left font-mono text-sm',
+                  'rounded-lg px-4 py-3.5 text-left font-mono text-sm transition-colors',
                   activeId === item.id
                     ? 'mobile-menu-item-active'
-                    : 'text-ink-400',
+                    : 'text-ink-400 light:text-slate-600 light:hover:bg-slate-100/80 light:hover:text-slate-900',
                 )}
               >
-                <span className="mr-3 text-accent-400">
+                <span className="mr-3 font-semibold text-accent-400">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 {item.label}

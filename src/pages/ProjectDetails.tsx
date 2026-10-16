@@ -14,10 +14,10 @@ export function ProjectDetails() {
     return (
       <Container className="flex min-h-screen flex-col items-center justify-center text-center">
         <p className="eyebrow">404</p>
-        <h1 className="mt-3 text-2xl font-semibold">Project not found</h1>
+        <h1 className="mt-3 text-2xl font-bold tracking-tight text-ink-50">Project not found</h1>
         <Link
           to="/"
-          className="mt-6 inline-flex items-center gap-2 font-mono text-sm text-accent-400 hover:underline"
+          className="mt-6 inline-flex items-center gap-2 font-mono text-sm font-medium text-accent-400 hover:underline"
         >
           <ArrowLeft size={14} /> Back to home
         </Link>
@@ -33,29 +33,29 @@ export function ProjectDetails() {
         <Container className="max-w-3xl">
           <Link
             to="/#projects"
-            className="inline-flex items-center gap-2 font-mono text-xs text-ink-400 hover:text-accent-400"
+            className="inline-flex items-center gap-2 font-mono text-xs font-semibold text-ink-400 hover:text-accent-400 transition-colors"
           >
             <ArrowLeft size={14} /> back to projects
           </Link>
 
-          <div className="mt-6 overflow-hidden rounded-xl border border-navy-600/60">
+          <div className="mt-6 overflow-hidden rounded-xl border border-navy-600/60 light:border-slate-200/90 light:shadow-sm">
             <img
               src={project.image}
               alt={`${project.title} preview`}
-              className="h-64 w-full object-cover"
+              className="h-64 sm:h-80 w-full object-cover"
             />
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <h1 className="text-3xl font-semibold">{project.title}</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-ink-50">{project.title}</h1>
             {project.status === 'in-progress' && (
-              <span className="rounded-md border border-signal-amber/40 bg-signal-amber/10 px-2.5 py-1 font-mono text-xs text-signal-amber">
+              <span className="rounded-md border border-signal-amber/40 bg-signal-amber/10 px-2.5 py-1 font-mono text-xs font-medium text-signal-amber light:border-amber-200/90 light:bg-amber-50/90 light:text-amber-800">
                 In Progress
               </span>
             )}
           </div>
 
-          <p className="mt-4 text-base leading-relaxed text-ink-300">
+          <p className="mt-4 text-base sm:text-lg leading-relaxed text-ink-300 font-normal">
             {project.longDescription}
           </p>
 
@@ -71,11 +71,11 @@ export function ProjectDetails() {
           </div>
 
           <div className="mt-8">
-            <p className="eyebrow">features</p>
-            <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <p className="eyebrow">key highlights</p>
+            <ul className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
               {project.features.map((feature) => (
-                <li key={feature} className="flex items-center gap-2 text-sm text-ink-300">
-                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent-400" />
+                <li key={feature} className="flex items-center gap-2 text-sm text-ink-200 font-normal">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent-400 light:bg-indigo-600" />
                   {feature}
                 </li>
               ))}

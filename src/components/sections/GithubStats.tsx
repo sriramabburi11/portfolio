@@ -33,7 +33,7 @@ export function GithubStats() {
                 href={`https://github.com/${GITHUB_USERNAME}`}
                 target="_blank"
                 rel="noreferrer"
-                className="text-accent-400 hover:underline"
+                className="font-medium text-accent-400 hover:underline"
               >
                 GitHub
               </a>
@@ -50,36 +50,36 @@ export function GithubStats() {
                 transition={{ duration: 0.45 }}
                 className="lg:col-span-1"
               >
-                <Card className="flex h-full flex-col items-center text-center">
+                <Card className="flex h-full flex-col items-center text-center p-6 sm:p-7">
                   <img
                     src={profile.avatar_url}
                     alt={`${profile.login} avatar`}
-                    className="h-20 w-20 rounded-full border border-navy-600/70"
+                    className="h-20 w-20 rounded-full border border-navy-600/70 light:border-slate-200/90 light:shadow-sm"
                     loading="lazy"
                   />
-                  <h3 className="mt-4 text-base font-semibold text-ink-50">
+                  <h3 className="mt-4 text-base font-bold text-ink-50">
                     {profile.name ?? profile.login}
                   </h3>
-                  <p className="font-mono text-xs text-ink-500">@{profile.login}</p>
+                  <p className="font-mono text-xs text-ink-400">@{profile.login}</p>
 
-                  <div className="mt-5 grid w-full grid-cols-3 gap-2 border-t border-navy-700/70 pt-5 text-center">
+                  <div className="mt-5 grid w-full grid-cols-3 gap-2 border-t border-navy-700/70 light:border-slate-200/90 pt-5 text-center">
                     <div>
-                      <p className="text-sm font-semibold text-ink-100">
+                      <p className="text-base font-bold text-ink-100">
                         {profile.public_repos}
                       </p>
-                      <p className="text-[11px] text-ink-500">Repos</p>
+                      <p className="text-[11px] font-medium text-ink-400">Repos</p>
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-ink-100">
+                      <p className="text-base font-bold text-ink-100">
                         {profile.followers}
                       </p>
-                      <p className="text-[11px] text-ink-500">Followers</p>
+                      <p className="text-[11px] font-medium text-ink-400">Followers</p>
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-ink-100">
+                      <p className="text-base font-bold text-ink-100">
                         {profile.following}
                       </p>
-                      <p className="text-[11px] text-ink-500">Following</p>
+                      <p className="text-[11px] font-medium text-ink-400">Following</p>
                     </div>
                   </div>
 
@@ -87,7 +87,7 @@ export function GithubStats() {
                     href={profile.html_url}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-5 inline-flex items-center gap-1.5 font-mono text-xs text-accent-400 hover:underline"
+                    className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-accent-400 hover:underline"
                   >
                     View profile <ExternalLink size={12} />
                   </a>
@@ -101,7 +101,7 @@ export function GithubStats() {
                 transition={{ duration: 0.45, delay: 0.1 }}
                 className="lg:col-span-2"
               >
-                <Card className="h-full">
+                <Card className="h-full p-6 sm:p-7">
                   <p className="eyebrow flex items-center gap-2">
                     <BookMarked size={12} /> recently updated repositories
                   </p>
@@ -110,28 +110,28 @@ export function GithubStats() {
                       No public repositories to show yet.
                     </p>
                   ) : (
-                    <ul className="mt-4 divide-y divide-navy-700/60">
+                    <ul className="mt-4 divide-y divide-navy-700/60 light:divide-slate-100">
                       {repos.slice(0, 6).map((repo) => (
-                        <li key={repo.id} className="flex items-center justify-between py-3">
-                          <div className="min-w-0">
+                        <li key={repo.id} className="group flex items-center justify-between py-3 transition-colors rounded-lg px-2 hover:bg-navy-700/20 light:hover:bg-slate-50/80">
+                          <div className="min-w-0 pr-4">
                             <a
                               href={repo.html_url}
                               target="_blank"
                               rel="noreferrer"
-                              className="truncate text-sm font-medium text-ink-100 hover:text-accent-400"
+                              className="truncate text-sm font-semibold text-ink-100 group-hover:text-accent-400 transition-colors"
                             >
                               {repo.name}
                             </a>
                             {repo.description && (
-                              <p className="mt-0.5 truncate text-xs text-ink-500">
+                              <p className="mt-0.5 truncate text-xs text-ink-400">
                                 {repo.description}
                               </p>
                             )}
                           </div>
-                          <div className="ml-4 flex flex-shrink-0 items-center gap-3 text-xs text-ink-500">
+                          <div className="flex flex-shrink-0 items-center gap-3 text-xs text-ink-400 font-mono">
                             {repo.language && <span>{repo.language}</span>}
-                            <span className="flex items-center gap-1">
-                              <Star size={12} /> {repo.stargazers_count}
+                            <span className="flex items-center gap-1 font-medium">
+                              <Star size={12} className="text-signal-amber" /> {repo.stargazers_count}
                             </span>
                           </div>
                         </li>
@@ -143,8 +143,8 @@ export function GithubStats() {
             </div>
           )}
 
-          <Card className="mt-6 flex items-center gap-3 text-xs text-ink-500">
-            <GitFork size={14} className="flex-shrink-0" />
+          <Card className="mt-6 flex items-center gap-3 text-xs text-ink-400 light:bg-slate-50/70 light:border-slate-200/70">
+            <GitFork size={14} className="flex-shrink-0 text-accent-400" />
             Contribution graph placeholder — swap in a calendar heatmap once a
             GitHub token-backed endpoint is available.
           </Card>

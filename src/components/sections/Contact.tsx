@@ -1,4 +1,4 @@
-import { useState , useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { Mail, Send } from 'lucide-react';
@@ -20,7 +20,7 @@ export function Contact() {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<ContactPayload>();
-  
+
   useEffect(() => {
     if (status === 'idle') return;
     const timer = setTimeout(() => setStatus('idle'), 5000);
@@ -54,35 +54,43 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="mt-10 max-w-2xl"
         >
-          <Card>
+          <Card className="p-6 sm:p-8">
             <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
               <div>
-                <label htmlFor="name" className="mb-1.5 block text-xs font-medium text-ink-400">
+                <label
+                  htmlFor="name"
+                  className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-ink-300 light:text-slate-700"
+                >
                   Name
                 </label>
                 <input
                   id="name"
                   type="text"
+                  placeholder="Your full name"
                   aria-invalid={errors.name ? 'true' : 'false'}
-                  className="w-full rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none focus:border-accent-400"
+                  className="w-full rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none transition-all focus:border-accent-400 light:border-slate-200/90 light:bg-slate-50/70 light:text-slate-900 light:placeholder-slate-400 light:focus:bg-white light:focus:border-indigo-600 light:focus:ring-4 light:focus:ring-indigo-500/10"
                   {...register('name', { required: 'Please enter your name.' })}
                 />
                 {errors.name && (
-                  <p role="alert" className="mt-1.5 text-xs text-signal-amber">
+                  <p role="alert" className="mt-1.5 text-xs font-medium text-signal-amber light:text-red-700">
                     {errors.name.message}
                   </p>
                 )}
               </div>
 
               <div>
-                <label htmlFor="email" className="mb-1.5 block text-xs font-medium text-ink-400">
+                <label
+                  htmlFor="email"
+                  className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-ink-300 light:text-slate-700"
+                >
                   Email
                 </label>
                 <input
                   id="email"
                   type="email"
+                  placeholder="you@domain.com"
                   aria-invalid={errors.email ? 'true' : 'false'}
-                  className="w-full rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none focus:border-accent-400"
+                  className="w-full rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none transition-all focus:border-accent-400 light:border-slate-200/90 light:bg-slate-50/70 light:text-slate-900 light:placeholder-slate-400 light:focus:bg-white light:focus:border-indigo-600 light:focus:ring-4 light:focus:ring-indigo-500/10"
                   {...register('email', {
                     required: 'Please enter your email.',
                     pattern: {
@@ -92,7 +100,7 @@ export function Contact() {
                   })}
                 />
                 {errors.email && (
-                  <p role="alert" className="mt-1.5 text-xs text-signal-amber">
+                  <p role="alert" className="mt-1.5 text-xs font-medium text-signal-amber light:text-red-700">
                     {errors.email.message}
                   </p>
                 )}
@@ -101,46 +109,53 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-1.5 block text-xs font-medium text-ink-400"
+                  className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-ink-300 light:text-slate-700"
                 >
                   Message
                 </label>
                 <textarea
                   id="message"
                   rows={5}
+                  placeholder="How can I help you?"
                   aria-invalid={errors.message ? 'true' : 'false'}
-                  className="w-full resize-none rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none focus:border-accent-400"
+                  className="w-full resize-none rounded-lg border border-navy-600/70 bg-navy-900/60 px-3.5 py-2.5 text-sm text-ink-100 outline-none transition-all focus:border-accent-400 light:border-slate-200/90 light:bg-slate-50/70 light:text-slate-900 light:placeholder-slate-400 light:focus:bg-white light:focus:border-indigo-600 light:focus:ring-4 light:focus:ring-indigo-500/10"
                   {...register('message', {
                     required: 'Please add a short message.',
                     minLength: { value: 10, message: 'Message should be at least 10 characters.' },
                   })}
                 />
                 {errors.message && (
-                  <p role="alert" className="mt-1.5 text-xs text-signal-amber">
+                  <p role="alert" className="mt-1.5 text-xs font-medium text-signal-amber light:text-red-700">
                     {errors.message.message}
                   </p>
                 )}
               </div>
 
-              <div className="flex flex-wrap items-center gap-4 pt-1">
+              <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Button type="submit" disabled={isSubmitting} icon={isSubmitting ? <Spinner /> : <Send size={16} />}>
                   {isSubmitting ? 'Sending…' : 'Send Message'}
                 </Button>
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="inline-flex items-center gap-1.5 font-mono text-xs text-ink-400 hover:text-accent-400"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-ink-400 hover:text-accent-400 light:text-slate-600 light:hover:text-indigo-600 transition-colors"
                 >
                   <Mail size={14} /> {SITE.email}
                 </a>
               </div>
 
               {status === 'success' && (
-                <p role="status" className="text-sm text-signal-green">
+                <p
+                  role="status"
+                  className="rounded-lg border border-signal-green/30 bg-signal-green/10 p-3.5 text-sm font-medium text-signal-green light:border-emerald-200/90 light:bg-emerald-50/90 light:text-emerald-800"
+                >
                   Message sent. Thanks for reaching out — I'll reply soon.
                 </p>
               )}
               {status === 'error' && (
-                <p role="alert" className="text-sm text-signal-amber">
+                <p
+                  role="alert"
+                  className="rounded-lg border border-signal-amber/30 bg-signal-amber/10 p-3.5 text-sm font-medium text-signal-amber light:border-red-200/90 light:bg-red-50/90 light:text-red-800"
+                >
                   The form isn't connected to a backend yet, so this couldn't be sent.
                   Feel free to email directly at {SITE.email} in the meantime.
                 </p>

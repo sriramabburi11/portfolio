@@ -22,9 +22,11 @@ export function SectionHeading({
       className={align === 'center' ? 'text-center' : 'text-left'}
     >
       <p className="eyebrow">{`// ${index}`}</p>
-      <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">{title}</h2>
+      <h2 className="mt-2 text-2xl font-bold tracking-tight text-ink-50 sm:text-3xl lg:text-[2.25rem] lg:leading-[2.75rem]">
+        {title}
+      </h2>
       {description && (
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-400 sm:text-base">
+        <p className="mt-3 max-w-2xl text-[15px] sm:text-base leading-relaxed text-ink-300 font-normal">
           {description}
         </p>
       )}
